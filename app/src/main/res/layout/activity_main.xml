@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/calories_burnt_prediction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/calories_burnt_prediction"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gender_label"
+        android:layout_width="81dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:text="Gender (0 or 1):"
+        app:layout_constraintBottom_toTopOf="@+id/age_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calories_burnt_prediction"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etGender"
+        android:layout_width="258dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:hint="Enter 0 or 1 for male or female"
+        android:inputType="number"
+        android:max="1"
+        android:min="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gender_label"
+        app:layout_constraintTop_toBottomOf="@+id/calories_burnt_prediction" />
+
+    <TextView
+        android:id="@+id/age_label"
+        android:layout_width="76dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:text="Age:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etGender" />
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="250dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="24dp"
+        android:hint="Enter the age"
+        android:inputType="number"
+        android:max="100"
+        android:min="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/age_label"
+        app:layout_constraintTop_toBottomOf="@+id/etGender" />
+
+    <TextView
+        android:id="@+id/height_label"
+        android:layout_width="74dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:text="Height (cm):"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAge" />
+
+    <EditText
+        android:id="@+id/etHeight"
+        android:layout_width="218dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:hint="Enter the height (in cm)"
+        android:inputType="number"
+        android:max="250"
+        android:min="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toEndOf="@+id/height_label"
+        app:layout_constraintTop_toBottomOf="@+id/etAge" />
+
+    <TextView
+        android:id="@+id/weight_label"
+        android:layout_width="73dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:text="Weight (kg):"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etHeight" />
+
+    <EditText
+        android:id="@+id/etWeight"
+        android:layout_width="257dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:hint="Enter the weight (in kg)"
+        android:inputType="number"
+        android:max="200"
+        android:min="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/weight_label"
+        app:layout_constraintTop_toBottomOf="@+id/etHeight" />
+
+    <TextView
+        android:id="@+id/duration_label"
+        android:layout_width="96dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="24dp"
+        android:text="Duration (minutes):"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etWeight" />
+
+    <EditText
+        android:id="@+id/etDuration"
+        android:layout_width="241dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="24dp"
+        android:hint="Enter the duration (in minutes)"
+        android:inputType="number"
+        android:max="180"
+        android:min="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/duration_label"
+        app:layout_constraintTop_toBottomOf="@+id/etWeight" />
+
+    <TextView
+        android:id="@+id/heart_rate_label"
+        android:layout_width="87dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:text="Heart Rate (bpm):"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDuration" />
+
+    <EditText
+        android:id="@+id/etHeartRate"
+        android:layout_width="261dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="24dp"
+        android:hint="Enter the heart rate (in bpm)"
+        android:inputType="number"
+        android:max="200"
+        android:min="40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/heart_rate_label"
+        app:layout_constraintTop_toBottomOf="@+id/etDuration" />
+
+    <TextView
+        android:id="@+id/body_temperature_label"
+        android:layout_width="116dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="24dp"
+        android:text="Body Temperature (°C):"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etHeartRate" />
+
+    <EditText
+        android:id="@+id/etBodyTemperature"
+        android:layout_width="227dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:hint="Enter the body temperature (in °C)"
+        android:inputType="numberDecimal"
+        android:max="45"
+        android:min="35"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/body_temperature_label"
+        app:layout_constraintTop_toBottomOf="@+id/etHeartRate" />
+
+    <Button
+        android:id="@+id/predict_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Predict Calories Burnt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etBodyTemperature"/>
+
+    <TextView
+        android:id="@+id/prediction_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/predict_button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
